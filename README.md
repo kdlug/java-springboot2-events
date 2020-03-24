@@ -17,4 +17,14 @@ By default custom events are synchronous.
 
 
 Starting with Spring 4.2, an event listener is not required to be a bean implementing the ApplicationListener interface – it can be registered on any public method of a managed bean via the @EventListener annotation.
-This listener is invoked synchronously. To make it asynchronous we need to add @Async annotation (do not forget to enable Async support in the application).
+This listener is invoked synchronously. To make it asynchronous we need to add `@Async` annotation (do not forget to enable Async support in the application).
+
+Enabling Async support
+
+```
+@Configuration
+@EnableAsync
+public class AsyncConfig {
+   
+}
+```
