@@ -24,6 +24,6 @@ public class CustomEventPublisherTest {
         publisher.publishEvent("TestEvent");
 
         // then
-        verify(listener, times(1)).onApplicationEvent(any());
+        verify(listener, timeout(100).times(1)).onApplicationEvent(any());
     }
 }
